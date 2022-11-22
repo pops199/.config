@@ -1,0 +1,101 @@
+###############################################################
+#                   Authelia configuration                    #
+###############################################################
+
+server:
+  host: 0.0.0.0
+  port: 9091
+
+jwt_secret: asdfghjkl';lkjhgfdssdfghjkl;';lkjhgfdssdfghjk
+log:
+  level: info
+
+default_redirection_url: https://auth.domain.co.za
+totp:
+  issuer: auth.domain.co.za
+  period: 30
+  skew: 1
+
+#duo_api:     ## You can use this api if you want push notifications of auth attempts
+#  hostname: api-123456789.example.com
+#  integration_key: ABCDEF
+#  secret_key: yet-another-long-string-of-characters-and-numbers-and-symbols
+
+authentication_backend:
+  disable_reset_password: false
+  file:
+    path: /config/users_database.yml
+    password:
+      algorithm: argon2id
+      iterations: 1
+      salt_length: 16
+      parallelism: 8
+      memory: 64
+
+ntp:
+  address: "time.cloudflare.com:123"
+  version: 3
+  max_desync: 3s
+  disable_startup_check: true
+  disable_failure: true
+
+access_control:
+  default_policy: deny
+  rules:
+    # Rules applied to everyone
+    - domain:
+        - "auth.domain.co.za"
+      policy: bypass
+    - domain:
+        - "portainer.domain.co.za"
+      policy: one_factor
+#      networks:
+#       - 192.168.1.0/24
+    - domain:
+        - "a2factor.domain.org"
+      policy: two_factor
+#     networks:
+#       - 192.168.1.0/24
+
+session:
+  name: authelia_session
+  # This secret can also be set using the env variables AUTHELIA_SESSION_SECRET_FILE
+  secret: 98798798798798798798798797987987987987
+  expiration: 600 # 10 minutes
+  inactivity: 1200 # 20 minutes
+  domain: domain.co.za # Should match whatever your root protected domain is
+
+  redis:
+    host: authelia-redis-1
+    port: 6379
+    # This secret can also be set using the env variables AUTHELIA_SESSION_REDIS_PASSWORD_FILE
+#    password: authelia
+
+regulation:
+  max_retries: 5
+  find_time: 2m
+  ban_time: 10m
+
+theme: dark
+
+storage:
+  encryption_key: a-very-long-strong-key-should-be-used-here
+  local:
+    path: /config/db.sqlite3
+
+notifier:
+  filesystem:
+    filename: /config/notification.txt
+#  smtp:
+#    username: johan@lionelsgroup.co.za
+#    password: wHFd79aMUX55
+#    host: smtp.lionelsgroup.co.za
+#    port: 587
+#    sender: johan@lionelsgroup.co.za
+#    subject: "[Authelia] {title}"
+#    disable_require_tls: true
+#    disable_html_emails: false
+#    tls:
+#      server_name: mail.lionelsgroup.co.za
+#      skip_verify: false
+#      minimum_version: TLS1.2
