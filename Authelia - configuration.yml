@@ -87,15 +87,15 @@ notifier:
   filesystem:
     filename: /config/notification.txt
 #  smtp:
-#    username: johan@lionelsgroup.co.za
-#    password: wHFd79aMUX55
+#    username: johan@doe.co.za
+#    password: ###########
 #    host: smtp.lionelsgroup.co.za
 #    port: 587
-#    sender: johan@lionelsgroup.co.za
+#    sender: john@doe.co.za
 #    subject: "[Authelia] {title}"
 #    disable_require_tls: true
 #    disable_html_emails: false
 #    tls:
-#      server_name: mail.lionelsgroup.co.za
+#      server_name: mail.domain.co.za
 #      skip_verify: false
 #      minimum_version: TLS1.2
