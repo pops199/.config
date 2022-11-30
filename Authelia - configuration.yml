@@ -89,7 +89,7 @@ notifier:
 #  smtp:
 #    username: johan@doe.co.za
 #    password: ###########
-#    host: smtp.lionelsgroup.co.za
+#    host: smtp.domain.co.za
 #    port: 587
 #    sender: john@doe.co.za
 #    subject: "[Authelia] {title}"
