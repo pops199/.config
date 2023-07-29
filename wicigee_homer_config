@@ -1,0 +1,182 @@
+---
+
+##################################
+# EDIT EVERYTHING BETWEEN THE "" #
+##################################
+
+title: "Wicigee Remote Homelab" # Main Title on Page
+subtitle: "Remote Access Utility" # 
+logo: "/path/to/icon" # Path to icon 
+# icon: "" # Optional icon
+
+header: true
+footer: '<p>Created by Johan Odendaal' # set false if you want to hide it.
+
+columns: "4"
+connectivityCheck: true
+
+# Optional theme customization
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link: "#3273dc"
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#2e3440"
+    highlight-secondary: "#5e81ac"
+    highlight-hover: "#4c566a"
+    background: "#434c5e"
+    card-background: "#3b4252"
+    text: "#d8dee9"
+    text-header: "#d8dee9"
+    text-title: "#d8dee9"
+    text-subtitle: "#88c0d0"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+
+# Optional message
+#message:
+  #url: https://b4bz.io
+ # style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+ # title: "Demo !"
+ # icon: "fa fa-grin"
+ # content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+# links:
+#   - name: "Solar"
+#     icon: "fab fa-sun" # Use FAS or FAB icons
+#     url: "" # 2nd Homer Container URL
+#     target: "_blank" # optional html a tag target attribute
+  
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Solar Power"                                          # Column 1
+    icon: "fab fa-sun"
+    items:
+      - name: "Solarman - Clanwilliam"                           # Shortcut 1
+        logo: "/path/to/icon"                                    # Path to Icon
+        subtitle: "Solar Plant Interface - CMB"
+        tag: "solar"
+        tagstyle: "is-success"
+        keywords: "power"
+        url: "https://globalpro.solarmanpv.com/login"
+        target: "_blank"                                         
+      - name: "Solar-Assistant Lamberts Bay"                     # Shortcut 2
+        logo: "/path/to/icon"
+        subtitle: "Solar & Inverter Data"
+        keywords: "solar"
+        tag: "solar"
+        tagstyle: "is-success"
+        url: "https://solar-assistant.io/sign_in"
+        target: "_blank"
+      - name: "Solar-Assistant Knysna"                          # Shortcut 3
+        logo: "/path/to/icon"
+        subtitle: "Solar & Inverter Data"
+        keywords: "solar"
+        tag: "solar"
+        tagstyle: "is-success"
+        url: "https://solar-assistant.io/sign_in"
+        target: "_blank"
+      - name: "Solar-Assistant RhinoZA"                         # Shortcut 4
+        logo: "/path/to/icon"
+        subtitle: "Solar & Inverter Data"
+        keywords: "solar"
+        tag: "solar"
+        tagstyle: "is-success"
+        url: "https://solar-assistant.io/sign_in"
+        target: "_blank"
+      - name: "Solar-Assistant Durbanville"                     # Shortcut 5
+        logo: "/path/to/icon"
+        subtitle: "Solar & Inverter Data"
+        keywords: "solar"
+        tag: "solar"
+        tagstyle: "is-success"
+        url: "https://solar-assistant.io/sign_in"
+        target: "_blank"
+  - name: "Johan Admin Page"                                    # Column 2
+    icon: "fab fa-sun"
+    items: 
+      - name: "EziMap"                                          # Shortcut 1
+        logo: "/path/to/icon"                                   
+        subtitle: "Vehicle Tracking"
+        tag: "tracking"
+        keywords: "tracking"
+        url: "https://ezimap.co.za/"
+        target: "_blank"  
+      - name: "Google Maps"                                     # Shortcut 2
+        logo: "/path/to/icon"                                   
+        subtitle: "Google Maps Webpage"
+        tag: "maps"
+        keywords: "google"
+        url: "https://www.google.com/maps"
+        target: "_blank"  
+      - name: "Google Search"                                   # Shortcut 3
+        logo: "/path/to/icon"                                   
+        subtitle: "Google Webpage"
+        tag: "search"
+        keywords: "google"
+        url: "https://www.google.com/"
+        target: "_blank"  
+      - name: "Gmail"                                           # Shortcut 4
+        logo: "/path/to/icon"                                   
+        subtitle: "Gmail Webpage"
+        tag: "mail"
+        keywords: "google"
+        url: "https://mail.google.com/mail/u/0/#inbox"
+        target: "_blank"  
+      - name: "MeshCentral"                                     # Shortcut 5
+        logo: "/path/to/icon"                                   
+        subtitle: "Remote Access"
+        tag: "mesh"
+        keywords: "remote"
+        url: "https://meshcentral.wicigee.co.za/"
+        target: "_blank"  
+  - name: "Services"                                            # Column 3
+    icon: "fab fa-sun"
+    items: 
+      - name: ""                                                # Shortcut 1
+        logo: "/path/to/icon"                                   
+        subtitle: ""
+        tag: ""
+        keywords: ""
+        url: ""
+        target: "_blank"  
+      - name: ""                                                # Shortcut 2
+        logo: "/path/to/icon"                                   
+        subtitle: ""
+        tag: ""
+        keywords: ""
+        url: ""
+        target: "_blank"  
+  - name: "Admin"                                               # Column 4
+    icon: "fab fa-sun"
+    items: 
+      - name: ""                                                # Shortcut 1
+        logo: "/path/to/icon"                                   
+        subtitle: ""
+        tag: ""
+        keywords: ""
+        url: ""
+        target: "_blank"  
+      - name: ""                                                # Shortcut 2
+        logo: "/path/to/icon"                                   
+        subtitle: ""
+        tag: ""
+        keywords: ""
+        url: ""
+        target: "_blank"  
