@@ -1,12 +1,10 @@
-# /---------------------\
-# | PPPP OOOO PPPP SSSS |
-# | P  P O  O P  P S    |
-# | PPPP O  O PPPP SSSS |
-# | P    O  O P       S |
-# | P    OOOO P    SSSS |
-# \---------------------/ 
+#  ____       ____
+# |  _ \ ___ |  _ \ ___
+# | |_) / _ \| |_) / __|
+# |  __/ (_) |  __/\__ \
+# |_|   \___/|_|   |___/
 #
-# Author: Johan Odendaal
+# Edited & Compiled by: Johan Odendaal - PoPs
 
 window:
   dimensions:
